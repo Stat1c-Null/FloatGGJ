@@ -699,7 +699,9 @@ MonoBehaviour:
     text: ah. Same my friend
   actors:
   - name: player
+    sprite: {fileID: 0}
   - name: Old man
+    sprite: {fileID: 0}
 --- !u!4 &1076098089
 Transform:
   m_ObjectHideFlags: 0
@@ -991,25 +993,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5182061271208449545, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -414
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182061271208449545, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 7200601012630793310, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8989712371115733428, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 4299004159279187761, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}

@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
 
+    public Image actorImage;
+
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage;
@@ -29,6 +31,7 @@ public class DialogueManager : MonoBehaviour
         messageText.text = messageToDisplay.text;
 
         Actor actorToDisplay = currentActors[messageToDisplay.id];
+        actorImage.sprite = actorToDisplay.sprite;
 
        
     }
