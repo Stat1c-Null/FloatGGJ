@@ -11,7 +11,7 @@ public class TriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("player") == true)
+        if(other.gameObject.CompareTag("Player") == true)
         {
           FindAnyObjectByType<CanvasManager>().StartGameMenu();
            trigger.StartDialogue();

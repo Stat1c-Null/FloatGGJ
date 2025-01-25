@@ -31,6 +31,10 @@ public class ItemController : MonoBehaviour
     private Item currentItem;
     private GameObject promptInstance;
 
+
+
+    
+
     private List<Item> items = new List<Item>();
 
     void Start()
@@ -97,6 +101,8 @@ public class ItemController : MonoBehaviour
             {
                 promptInstance = Instantiate(proximityPromptPrefab);
                 promptInstance.GetComponentInChildren<Text>().text = currentItem.interactionText;
+
+           
             }
         }
     }

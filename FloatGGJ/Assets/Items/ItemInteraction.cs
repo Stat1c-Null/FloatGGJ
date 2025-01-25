@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
+using UnityEngine.UI;
 
 public class ItemInteraction : MonoBehaviour
 {
     public string interactionText;
+
     public static event Action lookInteract = delegate {
         Debug.Log("Interaction called!"); 
     };
@@ -18,6 +20,8 @@ public class ItemInteraction : MonoBehaviour
     public GameObject proximityPromptPrefab;
     private bool isHighlighted;
 
+    public GameObject panelToActivate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,9 @@ public class ItemInteraction : MonoBehaviour
             Debug.LogError("ProximityPromptPrefab is not set in the inspector!");
         }
         GetComponent<Collider>().isTrigger = true;
+        panelToActivate.SetActive(false);
+        proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = "";
+
     }
 
     // Update is called once per frame
@@ -45,6 +52,7 @@ public class ItemInteraction : MonoBehaviour
         {
             isHighlighted = true;
             proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = interactionText;
+            panelToActivate.SetActive(true);
         }
     }
 
@@ -54,6 +62,7 @@ public class ItemInteraction : MonoBehaviour
         {
             isHighlighted = false;
             proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = "";
+            panelToActivate.SetActive(false);
         }
     }
 }
