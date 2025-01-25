@@ -991,6 +991,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2201120213036319627, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36.03711
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159917962682765022, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.3691406
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872037695010656403, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818294794982378392, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -48.903076
+      objectReference: {fileID: 0}
     - target: {fileID: 8989712371115733428, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
       propertyPath: m_Name
       value: Canvas
