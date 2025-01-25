@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump = 5.0f;
     private Vector3 movementDirection;
     public bool isGrounded;
+    public bool JumpingEnabled;
 
 
     // Start is called before the first frame update
@@ -24,16 +26,14 @@ public class PlayerMovement : MonoBehaviour
     {
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
-        if((Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0) && isGrounded) {
+        //Jumping
+        if((Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0) && isGrounded && JumpingEnabled) {
             isGrounded = false;
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
         }
         
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector3(movementDirection.x * speed, rb.velocity.y, rb.velocity.z);
+        //Movement
+        transform.Translate(movementDirection * speed * Time.deltaTime);
     }
 
     public void OnCollisionEnter(Collision other) {
