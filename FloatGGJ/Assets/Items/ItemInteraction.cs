@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using TMPro;
+
+public class ItemInteraction : MonoBehaviour
+{
+    public string interactionText;
+    public static event Action lookInteract = delegate {
+        Debug.Log("Interaction called!"); 
+    };
+
+    // todo: add different interactions: teleport, look, 
+
+    // Private
+    private GameObject player;
+    public GameObject proximityPromptPrefab;
+    private bool isHighlighted;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player"); // Ensure your player GameObject has the "Player" tag
+        if (!proximityPromptPrefab)
+        {
+            Debug.LogError("ProximityPromptPrefab is not set in the inspector!");
+        }
+        GetComponent<Collider>().isTrigger = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isHighlighted && Input.GetKeyDown(KeyCode.E))
+        {
+            lookInteract.Invoke();
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.CompareTag("Player"))
+        {
+            isHighlighted = true;
+            proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = interactionText;
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isHighlighted = false;
+            proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = "";
+        }
+    }
+}
