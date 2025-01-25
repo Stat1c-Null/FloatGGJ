@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(DialogueManager.isActive == true)
+        { return; }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
         //Jumping
