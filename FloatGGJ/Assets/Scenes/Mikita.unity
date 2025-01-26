@@ -713,11 +713,6 @@ Transform:
   - {fileID: 463036577}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1653174715 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2674239794809459130, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-  m_PrefabInstance: {fileID: 1578682291832996974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788383407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8989712371115733428, guid: b178c36ac4224184fa49bc5e621873c9, type: 3}
@@ -1059,10 +1054,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1493289310031291058, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.86
-      objectReference: {fileID: 0}
     - target: {fileID: 2479511524691118607, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1107,33 +1098,9 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 6706660890621097439, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1653174715}
     - target: {fileID: 7396497305610234428, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8436021068994733912, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522345302692130520, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_Size.x
-      value: 4.123106
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522345302692130520, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_Size.y
-      value: 7.42635
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522345302692130520, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_Center.x
-      value: -0.10002804
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522345302692130520, guid: c748174f10d7010438d04aecdf0d1b12, type: 3}
-      propertyPath: m_Center.y
-      value: 1.2425454
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
