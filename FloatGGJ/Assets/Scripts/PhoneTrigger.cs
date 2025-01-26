@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,12 +15,16 @@ public class PhoneTrigger : MonoBehaviour
     private UnityEngine.UI.Image mesgSprite;
     private int mesgIndex = 0;
     public static bool isActive = false;
+    AudioSource phoneBuzz;
+
+    public GameObject buzzPic, buzzPic2;
     // Start is called before the first frame update
     void Start()
     {
         canOpenPhone = false;
         convoOver = false;
         mesgSprite = phone.GetComponent<UnityEngine.UI.Image>();
+        phoneBuzz = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class PhoneTrigger : MonoBehaviour
             phone.SetActive(true);
             gradient.SetActive(true);
             canOpenPhone = false;
-            isActive = true;
+            phoneBuzz.Stop();
         }
         if(phone.activeInHierarchy == true && Input.GetMouseButtonDown(0) && mesgIndex < tweetMesg.Length) {
             mesgIndex++;
@@ -43,6 +46,8 @@ public class PhoneTrigger : MonoBehaviour
             mesgIndex = 0;
             convoOver = true;
             isActive = false;
+            buzzPic.SetActive(false);
+            buzzPic2.SetActive(false);
         }
     }
 
@@ -51,8 +56,12 @@ public class PhoneTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player") == true && convoOver == false)
         {
             FindAnyObjectByType<CanvasManager>().StartPhoneCanvas();
+            phoneBuzz.Play();
+            buzzPic.SetActive(true);
+            buzzPic2.SetActive(true);
             canOpenPhone = true;
             mesgSprite.sprite = tweetMesg[mesgIndex];
+            isActive = true;
         }
     }
 
