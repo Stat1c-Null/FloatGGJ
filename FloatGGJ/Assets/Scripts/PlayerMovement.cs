@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -46,9 +47,9 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
         }
-        
+
         //Movementg
-        transform.Translate(movementDirection * speed * Time.deltaTime * transform.localScale.x);
+        transform.Translate(movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x));
     }
 
     public void OnCollisionEnter(Collision other) {
