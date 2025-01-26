@@ -49,7 +49,7 @@ public class ParentDetection : MonoBehaviour
         if (Physics.Raycast(position, rotatedDirection, out hit, Mathf.Infinity, layerMask))
         { 
             Debug.DrawRay(position, rotatedDirection * hit.distance, Color.yellow); 
-            Debug.Log("Parents noticed you!"); 
+            //Debug.Log("Parents noticed you!"); 
         }
         else
         { 
