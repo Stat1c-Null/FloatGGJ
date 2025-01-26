@@ -15,6 +15,7 @@ public class PhoneTrigger : MonoBehaviour
     public Sprite[] tweetMesg;
     private UnityEngine.UI.Image mesgSprite;
     private int mesgIndex = 0;
+    public static bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class PhoneTrigger : MonoBehaviour
             phone.SetActive(true);
             gradient.SetActive(true);
             canOpenPhone = false;
+            isActive = true;
         }
         if(phone.activeInHierarchy == true && Input.GetMouseButtonDown(0) && mesgIndex < tweetMesg.Length) {
             mesgIndex++;
@@ -40,6 +42,7 @@ public class PhoneTrigger : MonoBehaviour
             FindAnyObjectByType<CanvasManager>().HidePhoneCanvas();
             mesgIndex = 0;
             convoOver = true;
+            isActive = false;
         }
     }
 
