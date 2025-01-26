@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.isActive == true)
+        if(DialogueManager.isActive == true || PhoneTrigger.isActive == true)
         {
             animator.SetBool("isWalking", false); 
             return; 

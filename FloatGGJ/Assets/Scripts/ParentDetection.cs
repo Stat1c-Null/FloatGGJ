@@ -10,6 +10,7 @@ public class ParentDetection : MonoBehaviour
     LayerMask layerMask;
     public int waitPeriod;
     AnimatorStateInfo stateInfo;
+    public GameObject dialogTrigger;
     void Start(){
         layerMask = LayerMask.GetMask("Player");
     }
@@ -49,7 +50,7 @@ public class ParentDetection : MonoBehaviour
         if (Physics.Raycast(position, rotatedDirection, out hit, Mathf.Infinity, layerMask))
         { 
             Debug.DrawRay(position, rotatedDirection * hit.distance, Color.yellow); 
-            //Debug.Log("Parents noticed you!"); 
+            dialogTrigger.SetActive(true);
         }
         else
         { 
