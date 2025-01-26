@@ -13,7 +13,7 @@ public class ItemInteraction : MonoBehaviour
         Debug.Log("Interaction called!"); 
     };
 
-    // todo: add different interactions: teleport, look, 
+    // todo: add different interactions: teleport, look
 
     // Private
     private GameObject player;
