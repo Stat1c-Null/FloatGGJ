@@ -9,9 +9,10 @@ public class ItemInteraction : MonoBehaviour
 {
     public string interactionText;
 
-    public static event Action lookInteract = delegate {
+    /*public static event Action lookInteract = delegate {
         Debug.Log("Interaction called!"); 
-    };
+    };*/
+    public event Action OnItemInteraction;
 
     // todo: add different interactions: teleport, look
 
@@ -20,7 +21,7 @@ public class ItemInteraction : MonoBehaviour
     public GameObject proximityPromptPrefab;
     private bool isHighlighted;
 
-    public GameObject panelToActivate;
+    public GameObject panelToActivate; // i actually forgot what this is supposed to do
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class ItemInteraction : MonoBehaviour
     {
         if (isHighlighted && Input.GetKeyDown(KeyCode.E))
         {
-            lookInteract.Invoke();
+            OnItemInteraction.Invoke();
         }
     }
 

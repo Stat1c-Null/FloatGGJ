@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool JumpingEnabled;
 
+    private bool isColliding;
+
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -48,13 +50,30 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
         }
 
-        //Movementg
-        transform.Translate(movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x));
+        //Movement
+        //transform.Translate(movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x));
+        if (!isColliding)
+        {
+            Vector3 force = movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x);
+            rb.MovePosition(rb.position + force);
+        }
     }
 
     public void OnCollisionEnter(Collision other) {
         if(other.collider.tag == "Ground") {
             isGrounded = true;
+        }
+        if(other.collider.tag == "Boundary")
+        {
+            isColliding = true;
+        }
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Boundary")
+        {
+            isColliding = false;
         }
     }
 }
