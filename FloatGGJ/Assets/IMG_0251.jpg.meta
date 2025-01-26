@@ -133,7 +133,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 39, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 149, y: -162.5}
+        - {x: 75, y: -187.5}
+        - {x: -17, y: -187.5}
+        - {x: -148, y: -187.5}
+        - {x: -214, y: -141.5}
+        - {x: -185, y: -21.5}
+        - {x: -159, y: 96.5}
+        - {x: -180, y: 184.5}
+        - {x: -3, y: 187.5}
+        - {x: 209, y: 165.5}
+        - {x: 209, y: -175.5}
       physicsShape: []
       tessellationDetail: 0
       bones: []
