@@ -887,6 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 795407800}
+  IsPaused: 0
 --- !u!114 &2120206569
 MonoBehaviour:
   m_ObjectHideFlags: 0

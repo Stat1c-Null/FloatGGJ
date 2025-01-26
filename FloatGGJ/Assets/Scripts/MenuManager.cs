@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject PauseMenu;
-    public static bool IsPaused = false;    
-    public   void PlayGame()
+    public bool IsPaused = false;    
+    public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
     }
@@ -19,27 +19,26 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void PauseGame()
+    private void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(IsPaused)
+            Debug.Log("aa");
+            if (IsPaused==false)
             {
+                Debug.Log("Stopping");
                 Stop();
             }
             else
             {
                 Resume();
             }
-           
-   
+
+
 
         }
-       
-
     }
+ 
     public void ReturnToMainMenu()
     {
         SceneManager.LoadSceneAsync(0);
@@ -49,18 +48,18 @@ public class MenuManager : MonoBehaviour
     
     public void Stop()
     {
-
+        IsPaused = true;
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
-        IsPaused = true;
+        
 
     }
     public void Resume()
     {
-
+        IsPaused=false;
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        IsPaused=false;
+      
 
     }
 
