@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - triggerZone
+  - Boundary
   layers:
   - Default
   - TransparentFX

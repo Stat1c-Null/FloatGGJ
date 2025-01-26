@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             isColliding = true;
         }
     }
-
+    
     public void OnCollisionExit(Collision collision)
     {
         if (collision.collider.tag == "Boundary")
