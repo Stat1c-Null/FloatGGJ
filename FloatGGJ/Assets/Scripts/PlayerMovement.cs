@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool JumpingEnabled;
 
+    public Objective Objective;
+
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isGrounded = true;
     }
 
     // Update is called once per frame

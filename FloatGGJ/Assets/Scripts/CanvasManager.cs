@@ -6,6 +6,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject myCanvas;
+    public GameObject phoneCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,23 @@ public class CanvasManager : MonoBehaviour
     {
         
     }
+
+    public void StartPhoneCanvas()
+    {
+        phoneCanvas.SetActive(true);
+    }
+
+    public void HidePhoneCanvas()
+    {
+        phoneCanvas.SetActive(false);
+    }
+
     public void StartGameMenu()
     {
 
         myCanvas.SetActive(true); // Show the canvas
 
     }
-
-
 
     public void HideGameMenu()
     {
