@@ -27,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.isActive == true)
-        { return; }
+        if(DialogueManager.isActive == true || PhoneTrigger.isActive == true)
+        {
+            animator.SetBool("isWalking", false); 
+            return; 
+        }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
 
