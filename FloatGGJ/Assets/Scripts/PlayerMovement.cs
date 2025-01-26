@@ -28,14 +28,17 @@ public class PlayerMovement : MonoBehaviour
         { return; }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
-        if(movementDirection.x < 0.0f) {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            animator.SetBool("isWalking", true);
-        } else if(movementDirection.x > 0.0f){
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            animator.SetBool("isWalking", true);
-        } else if(movementDirection.x == 0.0f) {
+
+        if (movementDirection.x == 0.0f)
+        {
             animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            float xScale = transform.localScale.x;
+            // Flip view direction
+            if (movementDirection.x > 0.0f && xScale < 0 || movementDirection.x < 0.0f && xScale > 0) { transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z); }
+            animator.SetBool("isWalking", true);
         }
 
         //Jumping
