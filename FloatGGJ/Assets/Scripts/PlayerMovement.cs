@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool JumpingEnabled;
 
-
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +28,16 @@ public class PlayerMovement : MonoBehaviour
         { return; }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
+        if(movementDirection.x < 0.0f) {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+            animator.SetBool("isWalking", true);
+        } else if(movementDirection.x > 0.0f){
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            animator.SetBool("isWalking", true);
+        } else if(movementDirection.x == 0.0f) {
+            animator.SetBool("isWalking", false);
+        }
+
         //Jumping
         if((Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0) && isGrounded && JumpingEnabled) {
             isGrounded = false;
