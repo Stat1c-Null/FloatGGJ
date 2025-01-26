@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:FloatGGJ/Assets/Scripts/Objective.cs.meta
 guid: 7b8244171ca36fd48821cbe6654aecc7
+========
+guid: 62bdec8598398d1448b3e45f5b092e74
+>>>>>>>> 9617330a530442d73618ee49ad8107c40cdc1d62:FloatGGJ/Assets/Scripts/NewBehaviourScript.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

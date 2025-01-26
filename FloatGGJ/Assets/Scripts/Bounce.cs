@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SmoothRandomBounce : MonoBehaviour
+public class Bounce : MonoBehaviour
 {
     private float baseY; // The initial Y position of the object
     private float bounceAmplitude; // Current bounce height
