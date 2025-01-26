@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Mikita.unity
-    guid: a98446e16830d014e82de4eb3f7e59ce
+    path: Assets/Scenes/MainMenu.unity
+    guid: e4932f25a42091b4e9a6a4f7da8bcb96
   - enabled: 1
     path: Assets/Scenes/Level_0.unity
     guid: f70fdffbfd96b47439c6dfb1d391433a
