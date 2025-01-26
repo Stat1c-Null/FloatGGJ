@@ -28,7 +28,7 @@ public class Dialogue_Second : MonoBehaviour
 public class Actor
 {
     public string name;
-    public Sprite sprite;
+    public Color charColor;
 }
 [System.Serializable]
 public class Message
