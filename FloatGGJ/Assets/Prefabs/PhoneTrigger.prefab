@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7692080999397593281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8990463471095785041}
+  - component: {fileID: 3239789282943053943}
+  - component: {fileID: 6069454439338104031}
+  m_Layer: 0
+  m_Name: PhoneTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8990463471095785041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692080999397593281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.973813, y: 0.66, z: -6.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3239789282943053943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692080999397593281}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.294791, y: 7.5024304, z: 4.960984}
+  m_Center: {x: -1.6473956, y: 3.2512152, z: 0.17277622}
+--- !u!114 &6069454439338104031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692080999397593281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0552caf214bad544b58181e45f2350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phone: {fileID: 0}
+  gradient: {fileID: 0}
+  canOpenPhone: 0
+  convoOver: 0
+  tweetMesg:
+  - {fileID: 21300000, guid: 02b568d63b2363140ae6c2461b0a9f39, type: 3}
+  - {fileID: 21300000, guid: 7e00b6a286b66af4db75c69a81a499a4, type: 3}
+  - {fileID: 21300000, guid: f06242e8df0275a4f9a872e102287366, type: 3}
+  - {fileID: 21300000, guid: cc821880edc432f46a4f2251a6dba81d, type: 3}
+  - {fileID: 21300000, guid: c53f9ac5882e97149a3fea7a088993db, type: 3}
+  - {fileID: 21300000, guid: a8c01088380c52349a20e6855d7680d0, type: 3}
+  - {fileID: 21300000, guid: 5ac1a653548bafe43af0a9475032fffd, type: 3}
+  - {fileID: 21300000, guid: 1095361fc19c15c4286fd017c411947d, type: 3}
+  - {fileID: 21300000, guid: ffdc4fea7c3ce7f488b6ae86095f67ae, type: 3}
+  - {fileID: 21300000, guid: e5a1cb0228f091a4c82c18bfe8a221ba, type: 3}

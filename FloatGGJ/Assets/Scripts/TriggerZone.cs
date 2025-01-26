@@ -12,7 +12,7 @@ public class TriggerZone : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player") == true)
         {
-          FindAnyObjectByType<CanvasManager>().StartGameMenu();
+           FindAnyObjectByType<CanvasManager>().StartGameMenu();
            trigger.StartDialogue();
         }
     }
