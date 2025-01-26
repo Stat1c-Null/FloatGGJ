@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movementDirection;
     public bool isGrounded;
     public bool JumpingEnabled;
+    public bool movementEnabled = true;
 
     private bool isColliding;
 
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.isActive == true)
+        if(DialogueManager.isActive == true || !movementEnabled)
         { return; }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         

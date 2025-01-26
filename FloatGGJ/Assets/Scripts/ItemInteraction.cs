@@ -10,9 +10,12 @@ public class ItemInteraction : MonoBehaviour
 {
     public string interactionText;
     public UnityEvent OnItemInteraction;
+    public UnityEvent OnItemExit;
     public GameObject proximityPromptPrefab;
     public GameObject textDisplay;
-    private bool isHighlighted;
+    public GameObject player;
+    private bool isHighlighted = false;
+    private bool isToggled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,6 @@ public class ItemInteraction : MonoBehaviour
         GetComponent<Collider>().isTrigger = true;
         proximityPromptPrefab.SetActive(false);
         textDisplay.GetComponent<TextMeshProUGUI>().text = "";
-
     }
 
     // Update is called once per frame
@@ -32,7 +34,16 @@ public class ItemInteraction : MonoBehaviour
     {
         if (isHighlighted && Input.GetKeyDown(KeyCode.E))
         {
+            isToggled = true;
+            isHighlighted = false;
             OnItemInteraction.Invoke();
+
+        }
+        else if (isToggled && Input.GetKeyDown(KeyCode.E))
+        {
+            isHighlighted = true;
+            isToggled = false;
+            OnItemExit.Invoke();
         }
     }
 
