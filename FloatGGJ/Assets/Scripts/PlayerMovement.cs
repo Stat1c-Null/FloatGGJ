@@ -14,14 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool JumpingEnabled;
 
-    public Objective Objective;
-
     public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        isGrounded = true;
     }
 
     // Update is called once per frame
@@ -50,8 +47,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
         }
         
-        //Movement
-        transform.Translate(movementDirection * speed * Time.deltaTime);
+        //Movementg
+        transform.Translate(movementDirection * speed * Time.deltaTime * transform.localScale.x);
     }
 
     public void OnCollisionEnter(Collision other) {
