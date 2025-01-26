@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mom_LookingBackDown
-  m_Speed: 0.5
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -443459094430852728}
@@ -38,9 +38,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: TimeElapsed
     m_EventTreshold: 0.01
-  - m_ConditionMode: 1
-    m_ConditionEvent: CanDetect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9082836652573959117}
   m_Solo: 0
@@ -63,7 +60,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mom_LookUp
-  m_Speed: 0.2
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6788546990745980098}
@@ -90,7 +87,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mom_LookDown
-  m_Speed: 0.2
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3647367295646346097}
@@ -120,9 +117,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: TimeElapsed
     m_EventTreshold: 0.01
-  - m_ConditionMode: 2
-    m_ConditionEvent: CanDetect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6106332667461211240}
   m_Solo: 0
@@ -148,9 +142,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: TimeElapsed
     m_EventTreshold: 0.01
-  - m_ConditionMode: 2
-    m_ConditionEvent: CanDetect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4710119177129065111}
   m_Solo: 0
@@ -176,12 +167,6 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: TimeElapsed
     m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: CanDetect
-    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -241,9 +226,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: TimeElapsed
     m_EventTreshold: 0.01
-  - m_ConditionMode: 1
-    m_ConditionEvent: CanDetect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8521991881620250067}
   m_Solo: 0
@@ -266,7 +248,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mom_LookAround
-  m_Speed: 0.4
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8926532744399209980}
