@@ -20,6 +20,24 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Pausing");
+            if(IsPaused == false)
+            {
+                Stop();
+            }
+            else
+            {
+                Resume();
+            }
+           
+   
+
+        }
+    }
+
     public void PauseGame()
     {
        

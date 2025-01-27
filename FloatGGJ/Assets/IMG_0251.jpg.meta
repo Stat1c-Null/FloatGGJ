@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 38675caf0774b3f4e933d942e6586f67
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IMG_0251_0
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 280
+        width: 428
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 39, z: 0, w: 0}
+      outline:
+      - - {x: 149, y: -162.5}
+        - {x: 75, y: -187.5}
+        - {x: -17, y: -187.5}
+        - {x: -148, y: -187.5}
+        - {x: -214, y: -141.5}
+        - {x: -185, y: -21.5}
+        - {x: -159, y: 96.5}
+        - {x: -180, y: 184.5}
+        - {x: -3, y: 187.5}
+        - {x: 209, y: 165.5}
+        - {x: 209, y: -175.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9997cf2a62e881942bfbf52defa65232
+      internalID: -347951409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_0251_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1109
+        width: 430
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -164, y: -117.5}
+        - {x: -40, y: 43.5}
+        - {x: -215, y: 86.5}
+        - {x: 4, y: 178.5}
+        - {x: 4, y: 117.5}
+        - {x: 158, y: 56.5}
+        - {x: 7, y: -84.5}
+        - {x: 71, y: -180.5}
+      - - {x: 102, y: -100.5}
+        - {x: 181, y: -35.5}
+        - {x: 215, y: -69.5}
+        - {x: 141, y: -175.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cdc0d41984a8948ab66010e93d6455
+      internalID: -58676656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_0251_2
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 1143
+        width: 327
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 22, w: 0}
+      outline:
+      - - {x: -155.93689, y: -24.143555}
+        - {x: -129.505, y: 134.44849}
+        - {x: -6.956543, y: 199.5}
+        - {x: 34.096436, y: 112.014404}
+        - {x: -31.404541, y: 62.324707}
+        - {x: -88.424805, y: -7.800293}
+        - {x: -55.015015, y: -72.20166}
+      - - {x: 48.67737, y: -165.52417}
+        - {x: -57.417725, y: -185.13855}
+        - {x: -56.5, y: -75.5}
+        - {x: 30.5, y: -84.5}
+        - {x: 0.25195312, y: 33.526367}
+        - {x: 93.965454, y: 59.958252}
+        - {x: 156.44116, y: -67.395996}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e8fd4c39a265740805dc5af9b84589
+      internalID: -1246705441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a3b6f9d438e246b4d83f333b224894a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      IMG_0251_0: -347951409
+      IMG_0251_1: -58676656
+      IMG_0251_2: -1246705441
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

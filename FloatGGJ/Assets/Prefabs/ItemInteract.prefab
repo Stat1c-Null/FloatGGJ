@@ -119,8 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: 
+  OnItemInteraction:
+    m_PersistentCalls:
+      m_Calls: []
   proximityPromptPrefab: {fileID: 0}
-  panelToActivate: {fileID: 0}
+  textDisplay: {fileID: 0}
 --- !u!1 &7416086927652183031
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5823505095695115606, guid: cb61b012d5c74604e80ddb86f9d86234, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3188
+      value: 0.304
       objectReference: {fileID: 0}
     - target: {fileID: 5823505095695115606, guid: cb61b012d5c74604e80ddb86f9d86234, type: 3}
       propertyPath: m_LocalRotation.w
@@ -331,11 +334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5823505095695115606, guid: cb61b012d5c74604e80ddb86f9d86234, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.03
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5823505095695115606, guid: cb61b012d5c74604e80ddb86f9d86234, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.05
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 5823505095695115606, guid: cb61b012d5c74604e80ddb86f9d86234, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
