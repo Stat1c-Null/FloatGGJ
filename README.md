@@ -12,5 +12,5 @@ Credits:
 * Danae Troupe -> Writing & Programming
 * Mikita Slabysh -> Programming
 * Shaniya -> Programming
-* Ollie Ivey -> 2D Art
+* Ollie Ivey -> 2D Art & Animation
 * Anthony (TJ) -> Music & Audio
