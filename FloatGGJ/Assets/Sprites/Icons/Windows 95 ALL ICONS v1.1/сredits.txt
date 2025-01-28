@@ -1,0 +1,24 @@
+
+[  /!\ All rights on these icons belong to Microsoft!  ]
+[ I do not own anything, I just made the icon pack ]
+
+
+
+
+== Icons source: Windows 95 OSR2 
+
+
+== Programs used:
+
+IconScanner v2.2 [AloneWolfSoft] -- Fast icon search
+
+Resource Hacker (console mode) [Angus Johnson] -- Extract all .ICOs
+-- Btw, why there's no command to extract all icons from all files in the folder?
+
+
+PaintDotNet v4.2 -- Graphic editor (for preview.png)
+
+
+== Special thanks to my cat, Ќюська (Nyus'ka)
+
+
