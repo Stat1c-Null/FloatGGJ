@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movementDirection;
     public bool isGrounded;
     public bool JumpingEnabled;
+    public bool movementEnabled = true;
+
+    private bool isColliding;
 
     public Animator animator;
     // Start is called before the first frame update
@@ -25,8 +28,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.isActive == true)
-        { return; }
+        if(DialogueManager.isActive == true || PhoneTrigger.isActive == true || !movementEnabled)
+        {
+            animator.SetBool("isWalking", false); 
+            return; 
+        }
         movementDirection = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
         
 
@@ -48,13 +54,30 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
         }
 
-        //Movementg
-        transform.Translate(movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x));
+        //Movement
+        //transform.Translate(movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x));
+        if (!isColliding)
+        {
+            Vector3 force = movementDirection * speed * Time.deltaTime * Math.Abs(transform.localScale.x);
+            rb.MovePosition(rb.position + force);
+        }
     }
 
     public void OnCollisionEnter(Collision other) {
         if(other.collider.tag == "Ground") {
             isGrounded = true;
+        }
+        if(other.collider.tag == "Boundary")
+        {
+            isColliding = true;
+        }
+    }
+    
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Boundary")
+        {
+            isColliding = false;
         }
     }
 }

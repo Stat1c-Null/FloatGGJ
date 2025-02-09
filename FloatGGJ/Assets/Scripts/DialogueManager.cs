@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI messageText;
+    public TextMeshProUGUI charName;
     public RectTransform backgroundBox;
 
-    public Image actorImage;
+    //public Image actorImage;
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -30,10 +31,12 @@ public class DialogueManager : MonoBehaviour
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.text;
 
-        Actor actorToDisplay = currentActors[messageToDisplay.id];
-        actorImage.sprite = actorToDisplay.sprite;
 
-       
+        Actor actorToDisplay = currentActors[messageToDisplay.id];
+        charName.text = actorToDisplay.name;
+
+        charName.color = actorToDisplay.charColor;
+        messageText.color = actorToDisplay.charColor;
     }
 
     public void NextMessage()

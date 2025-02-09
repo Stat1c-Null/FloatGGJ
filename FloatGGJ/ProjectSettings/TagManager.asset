@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - triggerZone
+  - Boundary
+  - PlayerCamera
   layers:
   - Default
   - TransparentFX

@@ -4,36 +4,28 @@ using UnityEngine;
 using System;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ItemInteraction : MonoBehaviour
 {
     public string interactionText;
-
-    public static event Action lookInteract = delegate {
-        Debug.Log("Interaction called!"); 
-    };
-
-    // todo: add different interactions: teleport, look
-
-    // Private
-    private GameObject player;
+    public UnityEvent OnItemInteraction;
+    public UnityEvent OnItemExit;
     public GameObject proximityPromptPrefab;
-    private bool isHighlighted;
-
-    public GameObject panelToActivate;
+    public GameObject textDisplay;
+    private bool isHighlighted = false;
+    private bool isToggled = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player"); // Ensure your player GameObject has the "Player" tag
         if (!proximityPromptPrefab)
         {
             Debug.LogError("ProximityPromptPrefab is not set in the inspector!");
         }
         GetComponent<Collider>().isTrigger = true;
-        panelToActivate.SetActive(false);
-        proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = "";
-
+        proximityPromptPrefab.SetActive(false);
+        textDisplay.GetComponent<TextMeshProUGUI>().text = "";
     }
 
     // Update is called once per frame
@@ -41,7 +33,16 @@ public class ItemInteraction : MonoBehaviour
     {
         if (isHighlighted && Input.GetKeyDown(KeyCode.E))
         {
-            lookInteract.Invoke();
+            isToggled = true;
+            isHighlighted = false;
+            OnItemInteraction.Invoke();
+
+        }
+        else if (isToggled && Input.GetKeyDown(KeyCode.E))
+        {
+            isHighlighted = true;
+            isToggled = false;
+            OnItemExit.Invoke();
         }
     }
 
@@ -51,8 +52,8 @@ public class ItemInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isHighlighted = true;
-            proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = interactionText;
-            panelToActivate.SetActive(true);
+            textDisplay.GetComponent<TextMeshProUGUI>().text = interactionText;
+            proximityPromptPrefab.SetActive(true);
         }
     }
 
@@ -61,8 +62,8 @@ public class ItemInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isHighlighted = false;
-            proximityPromptPrefab.GetComponent<TextMeshProUGUI>().text = "";
-            panelToActivate.SetActive(false);
+            textDisplay.GetComponent<TextMeshProUGUI>().text = "";
+            proximityPromptPrefab.SetActive(false);
         }
     }
 }

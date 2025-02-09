@@ -19,7 +19,26 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
-    private void Update()
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Pausing");
+            if(IsPaused == false)
+            {
+                Stop();
+            }
+            else
+            {
+                Resume();
+            }
+           
+   
+
+        }
+    }
+
+    public void PauseGame()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

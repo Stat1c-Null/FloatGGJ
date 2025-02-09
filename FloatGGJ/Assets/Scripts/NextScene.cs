@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
@@ -31,5 +30,10 @@ public class NextScene : MonoBehaviour
         {
             SceneManager.LoadScene(nextScene);
         }
+    }
+
+    public void GoNext()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
