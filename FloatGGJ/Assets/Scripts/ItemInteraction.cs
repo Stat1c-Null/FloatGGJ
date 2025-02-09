@@ -13,7 +13,6 @@ public class ItemInteraction : MonoBehaviour
     public UnityEvent OnItemExit;
     public GameObject proximityPromptPrefab;
     public GameObject textDisplay;
-    public GameObject player;
     private bool isHighlighted = false;
     private bool isToggled = false;
 
