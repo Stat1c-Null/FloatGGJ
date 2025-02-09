@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movementDirection;
     public bool isGrounded;
     public bool JumpingEnabled;
+    public bool movementEnabled = true;
 
     private bool isColliding;
 
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DialogueManager.isActive == true || PhoneTrigger.isActive == true)
+        if(DialogueManager.isActive == true || PhoneTrigger.isActive == true || !movementEnabled)
         {
             animator.SetBool("isWalking", false); 
             return; 
@@ -71,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             isColliding = true;
         }
     }
-
+    
     public void OnCollisionExit(Collision collision)
     {
         if (collision.collider.tag == "Boundary")
