@@ -17,7 +17,7 @@ public class TriggerDialogue : MonoBehaviour
         }
     }
 
-    IEnumerator ExecuteDialogue()
+    public IEnumerator ExecuteDialogue()
     {
         triggered = true;
         dialogueViewer.text = dialogue;

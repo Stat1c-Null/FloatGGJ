@@ -8,6 +8,8 @@ public class DialPad : MonoBehaviour
 {
     public Button[] DialButtons;
     public TextMeshProUGUI dialText;
+    public GameObject DialogueCanvas;
+    public GameObject DialogueName;
 
     void Start() {
         //dialText.enableWordWrapping = true;
@@ -33,9 +35,24 @@ public class DialPad : MonoBehaviour
         if(buttonText.text == "Del"){
             string text = dialText.text.Substring(0, dialText.text.Length - 2);
             dialText.text = text;
+        } else if(buttonText.text == "Dial"){
+            Debug.Log("Ignore empty input");
+            if(dialText.text == "9 1 1 "){
+                DialogueCanvas.SetActive(true);
+                DialogueName.GetComponent<TextMeshProUGUI>().text = "911";
+                StartCoroutine(gameObject.GetComponent<TriggerDialogue>().ExecuteDialogue());
+                StartCoroutine(HideDialogue());
+            }
         } else {
             dialText.text += buttonText.text + " ";
         }
         
+    }
+
+    IEnumerator HideDialogue()
+    {
+        yield return new WaitForSeconds(3);
+        dialText.text = "";
+        DialogueCanvas.SetActive(false);
     }
 }

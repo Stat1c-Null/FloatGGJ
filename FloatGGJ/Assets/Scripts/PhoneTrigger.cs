@@ -8,6 +8,7 @@ public class PhoneTrigger : MonoBehaviour
 {
 
     public GameObject phone;
+    public GameObject dialPad;
     public GameObject gradient;
     public bool canOpenPhone;
     public bool convoOver;
@@ -35,7 +36,7 @@ public class PhoneTrigger : MonoBehaviour
             if(GettingCalled) {
                 phone.SetActive(true);
             } else if(CallingPolice) {
-
+                dialPad.SetActive(true);
             }
         
             gradient.SetActive(true);
