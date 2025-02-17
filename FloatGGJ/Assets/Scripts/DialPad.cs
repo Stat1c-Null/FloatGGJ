@@ -32,10 +32,10 @@ public class DialPad : MonoBehaviour
 
         Debug.Log(buttonText.text);
         
-        if(buttonText.text == "Del"){
+        if(buttonText.text == "delete"){
             string text = dialText.text.Substring(0, dialText.text.Length - 2);
             dialText.text = text;
-        } else if(buttonText.text == "Dial"){
+        } else if(buttonText.text == "dial"){
             Debug.Log("Ignore empty input");
             if(dialText.text == "9 1 1 "){
                 DialogueCanvas.SetActive(true);
