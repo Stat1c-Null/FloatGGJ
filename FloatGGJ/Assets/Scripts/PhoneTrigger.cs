@@ -33,6 +33,7 @@ public class PhoneTrigger : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P) && canOpenPhone) {
+            //Open twitter if player is getting called, otherwise dial pad if calling police
             if(GettingCalled) {
                 phone.SetActive(true);
             } else if(CallingPolice) {
@@ -44,9 +45,11 @@ public class PhoneTrigger : MonoBehaviour
         
             if(GettingCalled) {phoneBuzz.Stop();}
         }
+        //Get through twitter messages
         if(phone.activeInHierarchy == true && Input.GetMouseButtonDown(0) && mesgIndex < tweetMesg.Length) {
             mesgIndex++;
             mesgSprite.sprite = tweetMesg[mesgIndex];
+        //If there are no more messages left close 
         } else if(mesgIndex == tweetMesg.Length - 1) {
             phone.SetActive(false);
             gradient.SetActive(false);
@@ -59,6 +62,11 @@ public class PhoneTrigger : MonoBehaviour
                 buzzPic2.SetActive(false);
             }
         }
+    }
+
+    public void StopCallingCops() {
+        convoOver = true;
+        isActive = false;
     }
 
     private void OnTriggerEnter(Collider other)

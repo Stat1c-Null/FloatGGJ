@@ -8,6 +8,7 @@ public class TriggerDialogue : MonoBehaviour
     public TextMeshProUGUI dialogueViewer;
     bool triggered = false;
     public string dialogue;
+    public int displayLength = 3;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -21,7 +22,7 @@ public class TriggerDialogue : MonoBehaviour
     {
         triggered = true;
         dialogueViewer.text = dialogue;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(displayLength);
         dialogueViewer.text = "";
     }
 }
