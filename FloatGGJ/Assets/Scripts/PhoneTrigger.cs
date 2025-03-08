@@ -8,6 +8,7 @@ public class PhoneTrigger : MonoBehaviour
 {
 
     public GameObject phone;
+    public GameObject dialPad;
     public GameObject gradient;
     public bool canOpenPhone;
     public bool convoOver;
@@ -16,8 +17,9 @@ public class PhoneTrigger : MonoBehaviour
     private int mesgIndex = 0;
     public static bool isActive = false;
     AudioSource phoneBuzz;
-
     public GameObject buzzPic, buzzPic2;
+    public bool GettingCalled; //Boolean to determine whether Aria is getting a call or taking phone out on her own initiative 
+    public bool CallingPolice;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,14 +33,23 @@ public class PhoneTrigger : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P) && canOpenPhone) {
-            phone.SetActive(true);
+            //Open twitter if player is getting called, otherwise dial pad if calling police
+            if(GettingCalled) {
+                phone.SetActive(true);
+            } else if(CallingPolice) {
+                dialPad.SetActive(true);
+            }
+        
             gradient.SetActive(true);
             canOpenPhone = false;
-            phoneBuzz.Stop();
+        
+            if(GettingCalled) {phoneBuzz.Stop();}
         }
+        //Get through twitter messages
         if(phone.activeInHierarchy == true && Input.GetMouseButtonDown(0) && mesgIndex < tweetMesg.Length) {
             mesgIndex++;
             mesgSprite.sprite = tweetMesg[mesgIndex];
+        //If there are no more messages left close 
         } else if(mesgIndex == tweetMesg.Length - 1) {
             phone.SetActive(false);
             gradient.SetActive(false);
@@ -46,9 +57,16 @@ public class PhoneTrigger : MonoBehaviour
             mesgIndex = 0;
             convoOver = true;
             isActive = false;
-            buzzPic.SetActive(false);
-            buzzPic2.SetActive(false);
+            if(GettingCalled) {
+                buzzPic.SetActive(false);
+                buzzPic2.SetActive(false);
+            }
         }
+    }
+
+    public void StopCallingCops() {
+        convoOver = true;
+        isActive = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,9 +74,11 @@ public class PhoneTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player") == true && convoOver == false)
         {
             FindAnyObjectByType<CanvasManager>().StartPhoneCanvas();
-            phoneBuzz.Play();
-            buzzPic.SetActive(true);
-            buzzPic2.SetActive(true);
+            if(GettingCalled) {
+                phoneBuzz.Play();
+                buzzPic.SetActive(true);
+                buzzPic2.SetActive(true);
+            }
             canOpenPhone = true;
             mesgSprite.sprite = tweetMesg[mesgIndex];
             isActive = true;
