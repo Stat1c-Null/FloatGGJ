@@ -853,11 +853,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d82504772aa38d4e9d7d115b05bc945, type: 3}
---- !u!1 &1219501833 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 495801251041025433, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-  m_PrefabInstance: {fileID: 4256236805831663783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1357559128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1827,90 +1822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 395808755431620152, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 395808755431620152, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 1363439405333458110, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1363439405333458110, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2168897197861823989, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168897197861823989, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2379434896907647619, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
       propertyPath: dialogueViewer
       value: 
       objectReference: {fileID: 1484657784}
-    - target: {fileID: 2826757318242680258, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2826757318242680258, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 2904631896517662469, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2904631896517662469, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3024253614268543594, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Color.b
-      value: 0.28453547
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024253614268543594, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Color.g
-      value: 0.28453547
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024253614268543594, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Color.r
-      value: 0.2905661
-      objectReference: {fileID: 0}
-    - target: {fileID: 3398073226401822787, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_text
-      value: dial
-      objectReference: {fileID: 0}
-    - target: {fileID: 3398073226401822787, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_fontSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3398073226401822787, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598548439924415727, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598548439924415727, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3689172994439442959, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689172994439442959, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4237908861160807771, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
       propertyPath: m_Name
       value: Canvas_Phone
@@ -1919,42 +1834,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4472801147532575094, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472801147532575094, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 5239587553611080185, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_text
-      value: delete
-      objectReference: {fileID: 0}
-    - target: {fileID: 5239587553611080185, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_fontSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5239587553611080185, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5506308181658664105, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5506308181658664105, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 5739884143076475510, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5739884143076475510, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5899010033597342683, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2035,38 +1914,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6235294039091251350, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6235294039091251350, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 6635620852980831924, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6635620852980831924, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 7252992740962131811, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7252992740962131811, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 8166534759994705588, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: DialScreen
-      value: 
-      objectReference: {fileID: 1219501833}
-    - target: {fileID: 8166534759994705588, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: PhoneCanvas
-      value: 
-      objectReference: {fileID: 8784067033567127866}
     - target: {fileID: 8166534759994705588, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
       propertyPath: DialogueName
       value: 
@@ -2075,14 +1922,6 @@ PrefabInstance:
       propertyPath: DialogueCanvas
       value: 
       objectReference: {fileID: 959167309}
-    - target: {fileID: 9032176520492169032, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9032176520492169032, guid: b7cb64a4d25e33c49abf757496771df6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
